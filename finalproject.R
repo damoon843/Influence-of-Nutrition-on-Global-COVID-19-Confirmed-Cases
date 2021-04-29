@@ -10,25 +10,6 @@ library(dplyr)
 library(ggplot2)
 library(table1)
 
-# ONGOING QUESTIONS
-# Small r-squared value with some significant results?
-# https://www.theanalysisfactor.com/small-r-squared/
-# https://www.theanalysisfactor.com/insignificant-effects-in-model/
-# https://web.ma.utexas.edu/users/mks/statmistakes/regressioncoeffs.html
-# Log transform some but not all variables -- log transform population?
-# Keep population in (despite failed multicollinearity test) model as control?
-
-# RESPONSE VAR
-# beta regression for percentage of confirmed cases? http://rcompanion.org/handbook/J_02.html
-# log ratio transform data? https://www.researchgate.net/post/Statistical_test_on_percentage_data_what_to_use
-# use GLM with special logistic link and binomail dist (special logistic regression) https://www.theanalysisfactor.com/when-to-use-logistic-regression-for-percentages-and-counts/
-# USE THIS: use raw counts from confirmed percentages and treat population as covariate in model -> multivariate lm
-
-# ASSUMPTIONS
-# Variables not normally distributed -> should be okay: https://data.library.virginia.edu/normality-assumption/
-# If we want normally distributed: consider transform: log(confirmed + some constant)
-# Could also consider performing quantile regression -> w/ median
-
 #-BEGIN SCRIPT-----------------------------------------------------------------#
 
 # Load in and initially inspect the data
